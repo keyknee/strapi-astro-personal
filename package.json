@@ -1,0 +1,35 @@
+{
+  "name": "strapi-astro-starter",
+  "version": "0.1.0",
+  "description": "a simple demonstration of the Strapi CMS starter template, but with an Astro frontend",
+  "scripts": {
+    "frontend": "pnpm dev --prefix ../frontend/",
+    "backend": "pnpm dev --prefix ../backend/",
+    "setup:frontend": "cd frontend && pnpm install",
+    "setup:backend": "cd backend && pnpm build && pnpm install",
+    "setup": "pnpm install && pnpm setup:frontend && pnpm setup:backend",
+    "dev": "concurrently \"cd backend && pnpm develop\" \"cd frontend && pnpm dev\"",
+    "seed": "cd backend && pnpm strapi import -f ../seed-data.tar.gz",
+    "export": "cd backend && pnpm strapi export --no-encrypt -f ../seed-data"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "npm-check-updates": "^16.14.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyknee/strapi-astro-starter.git"
+  },
+  "keywords": [
+    "Strapi",
+    "Astro",
+    "template",
+    "starter"
+  ],
+  "author": "Toni Kini Foster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyknee/strapi-astro-starter/issues"
+  },
+  "homepage": "https://github.com/keyknee/strapi-astro-starter#readme"
+}
